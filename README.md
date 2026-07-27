@@ -14,6 +14,7 @@ already ahead of it in the queue, before it is allowed to merge.
 
 The problem with direct merges and stacked pull requests
 How the merge queue works under the hood
+Real world examples from busy shared repositories
 A short live demo of two competing pull requests
 Questions and discussion
 
