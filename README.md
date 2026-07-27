@@ -14,6 +14,7 @@ already ahead of it in the queue, before it is allowed to merge.
 
 The problem with direct merges and stacked pull requests
 How the merge queue works under the hood
+Key terms, temporary merge commits, required checks, and queue order
 A short live demo of two competing pull requests
 Questions and discussion
 
@@ -25,3 +26,10 @@ requests merge in quick succession, later ones may never be retested
 against everything that landed just before them. A merge queue closes
 that gap by always testing against the true, up to date state of the
 target branch plus any queued changes ahead of it.
+
+## Core concepts
+
+A merge queue builds a temporary branch for each entry that combines the
+target branch with the pull request and everything already queued ahead
+of it. Required status checks run against that temporary branch. Only if
+they pass does the entry actually get merged into the target branch.
