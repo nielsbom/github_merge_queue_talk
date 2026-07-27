@@ -26,3 +26,10 @@ requests merge in quick succession, later ones may never be retested
 against everything that landed just before them. A merge queue closes
 that gap by always testing against the true, up to date state of the
 target branch plus any queued changes ahead of it.
+
+## Real world examples
+
+Large shared repositories with many active contributors see dozens of
+pull requests approved per day. Without a merge queue, teams often fall
+back to a single release manager manually rebasing and merging one
+change at a time, which quickly becomes a bottleneck as the team grows.
