@@ -9,3 +9,10 @@ protected branch safely and quickly, without requiring every author to
 rebase on top of each other by hand. Each pull request is tested against the
 latest version of the target branch, together with any other pull requests
 already ahead of it in the queue, before it is allowed to merge.
+
+## Agenda
+
+The problem with direct merges and stacked pull requests
+How the merge queue works under the hood
+A short live demo of two competing pull requests
+Questions and discussion
