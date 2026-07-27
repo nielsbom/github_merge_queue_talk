@@ -14,6 +14,7 @@ already ahead of it in the queue, before it is allowed to merge.
 
 The problem with direct merges and stacked pull requests
 How the merge queue works under the hood
+Real world examples from busy shared repositories
 A short live demo of two competing pull requests
 Questions and discussion
 
@@ -25,3 +26,10 @@ requests merge in quick succession, later ones may never be retested
 against everything that landed just before them. A merge queue closes
 that gap by always testing against the true, up to date state of the
 target branch plus any queued changes ahead of it.
+
+## Real world examples
+
+Large shared repositories with many active contributors see dozens of
+pull requests approved per day. Without a merge queue, teams often fall
+back to a single release manager manually rebasing and merging one
+change at a time, which quickly becomes a bottleneck as the team grows.
