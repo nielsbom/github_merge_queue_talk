@@ -16,3 +16,12 @@ The problem with direct merges and stacked pull requests
 How the merge queue works under the hood
 A short live demo of two competing pull requests
 Questions and discussion
+
+## Why a merge queue
+
+Without a merge queue, a pull request is usually only tested against the
+target branch as it looked when the check last ran. If several pull
+requests merge in quick succession, later ones may never be retested
+against everything that landed just before them. A merge queue closes
+that gap by always testing against the true, up to date state of the
+target branch plus any queued changes ahead of it.
